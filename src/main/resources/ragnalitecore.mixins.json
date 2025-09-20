@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fr.iglee42.ragnalitecore.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "ragnalitecore.refmap.json",
+  "mixins": [
+    "MBDMachineDefinitionMixin",
+    "MBDMachineMixin"
+  ],
+  "client": [
+    "MBDBESRendererMixin",
+    "MBDRendererProviderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

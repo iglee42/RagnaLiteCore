@@ -1,0 +1,33 @@
+{
+  "item.ragnalitecore.tier_12_rocket": "Tier 12 Rocket",
+  "item.ragnalitecore.tier_13_rocket": "Tier 13 Rocket",
+  "item.ragnalitecore.tier_14_rocket": "Tier 14 Rocket",
+  "item.ragnalitecore.tier_15_rocket": "Tier 15 Rocket",
+  "item.ragnalitecore.tier_16_rocket": "Tier 16 Rocket",
+  "item.ragnalitecore.tier_17_rocket": "Tier 17 Rocket",
+  "item.ragnalitecore.tier_18_rocket": "Tier 18 Rocket",
+  "item.ragnalitecore.tier_19_rocket": "Tier 19 Rocket",
+  "item.ragnalitecore.tier_20_rocket": "Tier 20 Rocket",
+  "item.ragnalitecore.tier_21_rocket": "Tier 21 Rocket",
+
+  "entity.ragnalitecore.tier_12_rocket": "Tier 12 Rocket",
+  "entity.ragnalitecore.tier_13_rocket": "Tier 13 Rocket",
+  "entity.ragnalitecore.tier_14_rocket": "Tier 14 Rocket",
+  "entity.ragnalitecore.tier_15_rocket": "Tier 15 Rocket",
+  "entity.ragnalitecore.tier_16_rocket": "Tier 16 Rocket",
+  "entity.ragnalitecore.tier_17_rocket": "Tier 17 Rocket",
+  "entity.ragnalitecore.tier_18_rocket": "Tier 18 Rocket",
+  "entity.ragnalitecore.tier_19_rocket": "Tier 19 Rocket",
+  "entity.ragnalitecore.tier_20_rocket": "Tier 20 Rocket",
+  "entity.ragnalitecore.tier_21_rocket": "Tier 21 Rocket",
+
+  "modname.ragnalitecore": "Ragnamod Lite Core",
+
+  "config.definition.ritualCircle": "Ritual Circle",
+  "config.ritual_circle.use_ritual_circle": "Display Ritual Circle",
+  "config.ritual_circle.inner_texture": "Inner Texture",
+  "config.ritual_circle.outer_texture": "Outer Texture",
+  "config.ritual_circle.offset": "Offset",
+  "config.ritual_circle.inner_preview": "Inner Texture Preview",
+  "config.ritual_circle.outer_preview": "Outer Texture Preview"
+}
