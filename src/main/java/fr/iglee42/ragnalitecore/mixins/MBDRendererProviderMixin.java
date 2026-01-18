@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(MBDBlockRenderer.class)
 public class MBDRendererProviderMixin {
 
-    @Inject(method = "lambda$render$13",at = @At(value = "TAIL"))
+    @Inject(method = "lambda$render$14",at = @At(value = "TAIL"))
     private static void rlc$addRitualCircleRender(BlockEntity blockEntity, float partialTicks, PoseStack stack, MultiBufferSource buffer, int combinedLight, int combinedOverlay, MBDMachine machine, CallbackInfo ci){
         if (Minecraft.getInstance().getBlockEntityRenderDispatcher().getRenderer(blockEntity) instanceof MBDMagicCircleModel renderer){
              if (machine instanceof MBDMagicCircle circle && circle.rlc$getMagicCircle() != null && machine.getDefinition() instanceof MBDRitualCircleDefinition def) {
