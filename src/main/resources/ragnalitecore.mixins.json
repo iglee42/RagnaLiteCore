@@ -6,6 +6,7 @@
   "refmap": "ragnalitecore.refmap.json",
   "mixins": [
     "HazmatArmorItemMixin",
+    "MapDimensionConfigMixin",
     "MBDMachineDefinitionMixin",
     "MBDMachineMixin"
   ],
