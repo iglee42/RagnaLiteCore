@@ -22,6 +22,7 @@
   "entity.ragnalitecore.tier_21_rocket": "Tier 21 Rocket",
 
   "modname.ragnalitecore": "Ragnamod Lite Core",
+  "tooltip.ragnalitecore.sun_station_already_exists": "You already have a space station around the sun!",
 
   "config.definition.ritualCircle": "Ritual Circle",
   "config.ritual_circle.use_ritual_circle": "Display Ritual Circle",

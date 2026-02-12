@@ -5,14 +5,18 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "ragnalitecore.refmap.json",
   "mixins": [
+    "FuelLoaderBlockEntityMixin",
     "HazmatArmorItemMixin",
     "MapDimensionConfigMixin",
     "MBDMachineDefinitionMixin",
-    "MBDMachineMixin"
+    "MBDMachineMixin",
+    "MinecraftServerAccessor",
+    "PlanetsMenuMixin"
   ],
   "client": [
     "MBDBESRendererMixin",
-    "MBDRendererProviderMixin"
+    "MBDRendererProviderMixin",
+    "PlanetsScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

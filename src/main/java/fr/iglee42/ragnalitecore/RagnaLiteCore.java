@@ -14,9 +14,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.storage.LevelResource;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.server.ServerAboutToStartEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -36,6 +38,7 @@ import org.slf4j.Logger;
 public class RagnaLiteCore {
 
     public static final String MODID = "ragnalitecore";
+    public static final String RAGNA_LITE = "ragnalite";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     private static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(),MODID);
@@ -56,13 +59,14 @@ public class RagnaLiteCore {
         TABS.register(modEventBus);
         RLCItems.ITEMS.init();
         RLCEntities.ENTITY_TYPES.init();
+        RLCPackets.register();
 
         modEventBus.addListener(this::addCreative);
 
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(RLCPackets::register);
+        //event.enqueueWork(RLCPackets::register);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

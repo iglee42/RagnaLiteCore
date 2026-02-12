@@ -4,6 +4,7 @@ import fr.iglee42.ragnalitecore.packets.CreateMagicCircleS2C;
 import fr.iglee42.ragnalitecore.packets.DeleteMagicCircleS2C;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
@@ -26,7 +27,6 @@ public class RLCPackets {
                 .simpleChannel();
 
         INSTANCE = net;
-
 
         net.messageBuilder(CreateMagicCircleS2C.class, id(), NetworkDirection.PLAY_TO_CLIENT)
                 .decoder(CreateMagicCircleS2C::decode)

@@ -10,6 +10,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkEvent;
 
@@ -27,13 +29,7 @@ public record DeleteMagicCircleS2C(BlockPos pos) {
 
     public static void handle(DeleteMagicCircleS2C packet, Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
-            assert ctx.get().getDirection() == NetworkDirection.PLAY_TO_CLIENT;
-
-            Level level = Minecraft.getInstance().level;
-            if (level != null && level.getBlockEntity(packet.pos()) instanceof MachineBlockEntity mbe && mbe.getMetaMachine() instanceof MBDMachine machine){
-                if (machine instanceof MBDMagicCircle casted)
-                    casted.rlc$setMagicCircle(null);
-            }
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT,()->()->ClientPacketHandler.handleDeleteMagicCircle(packet, ctx.get()));
         });
         ctx.get().setPacketHandled(true);
     }
