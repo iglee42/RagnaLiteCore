@@ -5,11 +5,13 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "ragnalitecore.refmap.json",
   "mixins": [
+    "ChemicalTankCapabilityTraitGasMixin",
     "FuelLoaderBlockEntityMixin",
     "HazmatArmorItemMixin",
     "MapDimensionConfigMixin",
     "MBDMachineDefinitionMixin",
     "MBDMachineMixin",
+    "MekanismChemicalRecipeCapabilityMixin",
     "MinecraftServerAccessor",
     "PlanetsMenuMixin"
   ],
