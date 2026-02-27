@@ -13,7 +13,8 @@
     "MBDMachineMixin",
     "MekanismChemicalRecipeCapabilityMixin",
     "MinecraftServerAccessor",
-    "PlanetsMenuMixin"
+    "PlanetsMenuMixin",
+    "TileEntityBasicLaserMixin"
   ],
   "client": [
     "MBDBESRendererMixin",

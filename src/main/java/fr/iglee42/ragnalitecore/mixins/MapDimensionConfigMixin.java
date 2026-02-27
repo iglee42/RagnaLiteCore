@@ -18,11 +18,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.LinkOption;
-import java.nio.file.Path;
+import java.nio.file.*;
 
 @Mixin(value = MapDimensionConfig.class,remap = false)
 public class MapDimensionConfigMixin {
@@ -34,6 +32,10 @@ public class MapDimensionConfigMixin {
         try (LevelStorageSource.LevelStorageAccess access = ((MinecraftServerAccessor)event.getServer()).rlc$getStorageSource()){
             rlc$deleteDirectoryRecursion(access.getDimensionPath(ResourceKey.create(Registries.DIMENSION,mapId)));
             ExileLog.get().log("[RagnaLiteCore] Taken {} seconds to wipe dimension " + access.getDimensionPath(ResourceKey.create(Registries.DIMENSION,mapId)) +"!", String.format("%.2f", (System.currentTimeMillis() - startMillis) / 1000f));
+        } catch (NoSuchFileException | FileNotFoundException ex){
+            ExileLog.get().log("[RagnaLiteCore] Dimension " + mapId +" doesn't exist so no need to wipe !");
+            ci.cancel();
+            return;
         } catch (IOException ex){
             ExileLog.get().log("[RagnaLiteCore] Failed to wipe dimension " + mapId +"! Using old function to do it !", ex);
             wiped.setFalse();
