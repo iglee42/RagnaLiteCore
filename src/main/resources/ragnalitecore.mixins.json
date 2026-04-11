@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "ragnalitecore.refmap.json",
   "mixins": [
+    "BlackHoleBlockEntityMixin",
     "ChemicalTankCapabilityTraitGasMixin",
     "FuelLoaderBlockEntityMixin",
     "HazmatArmorItemMixin",
@@ -26,5 +27,8 @@
   },
   "overwrites": {
     "requireAnnotations": true
+  },
+  "mixinextras": {
+    "minVersion": "0.4.1"
   }
 }
