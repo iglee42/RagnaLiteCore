@@ -13,11 +13,11 @@
     "MBDMachineDefinitionMixin",
     "MBDMachineMixin",
     "MekanismChemicalRecipeCapabilityMixin",
-    "MinecraftServerAccessor",
     "PlanetsMenuMixin",
     "TileEntityBasicLaserMixin"
   ],
   "client": [
+    "BlockElementMixin",
     "MBDBESRendererMixin",
     "MBDRendererProviderMixin",
     "PlanetsScreenMixin"

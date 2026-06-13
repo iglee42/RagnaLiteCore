@@ -34,6 +34,8 @@ minecraft {
 
     copyIdeResources = true
 
+    accessTransformers = project.files("src/main/resources/META-INF/accesstransformer.cfg")
+
     runs {
         configureEach {
             workingDirectory project.file('run')
