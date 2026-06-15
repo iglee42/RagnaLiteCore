@@ -137,7 +137,7 @@ dependencies {
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    compileOnly group: "earth.terrarium.adastra", name: "ad_astra-forge-$minecraft_version", version: adastra_version, transitive: false
+    implementation group: "earth.terrarium.adastra", name: "ad_astra-forge-$minecraft_version", version: adastra_version, transitive: false
     implementation fg.deobf("com.teamresourceful.resourcefullib:resourcefullib-forge-1.20.1:2.1.23")
     implementation "com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:2.1.2"
     implementation fg.deobf("maven.modrinth:botarium:2.3.4")
@@ -148,10 +148,15 @@ dependencies {
     implementation fg.deobf("curse.maven:alexs-caves-924854:5848216")
     implementation fg.deobf("curse.maven:library-of-exile-398780:7167023")
     implementation fg.deobf("curse.maven:ad-astra-giselle-addon-714958:6869946")
+    runtimeOnly fg.deobf("curse.maven:valhelsia-core-416935:5189548")
 
 
     implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }
     implementation fg.deobf("com.lowdragmc.multiblocked2:Multiblocked2:${minecraft_version}-${mb2_version}") { transitive = false }
+
+    implementation fg.deobf("curse.maven:blood-magic-224791:7956981")
+    implementation fg.deobf("curse.maven:patchouli-306770:7731017")
+
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
