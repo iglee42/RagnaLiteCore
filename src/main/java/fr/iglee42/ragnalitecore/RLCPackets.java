@@ -2,6 +2,8 @@ package fr.iglee42.ragnalitecore;
 
 import fr.iglee42.ragnalitecore.packets.CreateMagicCircleS2C;
 import fr.iglee42.ragnalitecore.packets.DeleteMagicCircleS2C;
+import fr.iglee42.ragnalitecore.packets.LaunchShakeS2C;
+import fr.iglee42.ragnalitecore.packets.SetRiftSizeS2C;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.fml.loading.FMLEnvironment;
@@ -39,6 +41,19 @@ public class RLCPackets {
                 .encoder(DeleteMagicCircleS2C::encode)
                 .consumerMainThread(DeleteMagicCircleS2C::handle)
                 .add();
+
+        net.messageBuilder(LaunchShakeS2C.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(LaunchShakeS2C::decode)
+                .encoder(LaunchShakeS2C::encode)
+                .consumerMainThread(LaunchShakeS2C::handle)
+                .add();
+
+        net.messageBuilder(SetRiftSizeS2C.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(SetRiftSizeS2C::decode)
+                .encoder(SetRiftSizeS2C::encode)
+                .consumerMainThread(SetRiftSizeS2C::handle)
+                .add();
+
 
 
     }

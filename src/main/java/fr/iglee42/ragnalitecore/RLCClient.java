@@ -5,6 +5,7 @@ import com.drd.ad_extendra.client.renderers.entities.vehicles.CustomRocketRender
 import earth.terrarium.adastra.client.forge.AdAstraClientForge;
 import earth.terrarium.adastra.client.renderers.entities.vehicles.RocketRenderer;
 import earth.terrarium.botarium.client.ClientHooks;
+import fr.iglee42.ragnalitecore.rift.RiftingBlockRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -49,6 +50,7 @@ public class RLCClient {
         ClientHooks.registerEntityRenderer(RLCEntities.TIER_19_ROCKET, c -> new RocketRenderer(c, CustomRocketModel.TIER_11_LAYER, TIER_19_TEXTURE));
         ClientHooks.registerEntityRenderer(RLCEntities.TIER_20_ROCKET, c -> new RocketRenderer(c, CustomRocketModel.TIER_11_LAYER, TIER_20_TEXTURE));
         ClientHooks.registerEntityRenderer(RLCEntities.TIER_21_ROCKET, c -> new RocketRenderer(c, CustomRocketModel.TIER_11_LAYER, TIER_21_TEXTURE));
+        event.registerBlockEntityRenderer(RLCBlocks.RIFTING_BLOCK_ENTITY.get(), RiftingBlockRenderer::new);
     }
 
     public static void onRegisterItemRenderers(BiConsumer<Item, BlockEntityWithoutLevelRenderer> consumer) {

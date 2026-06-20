@@ -137,9 +137,10 @@ dependencies {
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    implementation group: "earth.terrarium.adastra", name: "ad_astra-forge-$minecraft_version", version: adastra_version, transitive: false
+    compileOnly group: "earth.terrarium.adastra", name: "ad_astra-forge-$minecraft_version", version: adastra_version, transitive: false
+    runtimeOnly fg.deobf("curse.maven:ad-astra-635042:6262032")
     implementation fg.deobf("com.teamresourceful.resourcefullib:resourcefullib-forge-1.20.1:2.1.23")
-    implementation "com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:2.1.2"
+    implementation fg.deobf("com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1:2.1.2")
     implementation fg.deobf("maven.modrinth:botarium:2.3.4")
     implementation fg.deobf("maven.modrinth:ad_extendra-continuation:1.1.2")
     implementation fg.deobf("maven.modrinth:forbidden-arcanus:1.20.1-2.2.6")
@@ -149,6 +150,7 @@ dependencies {
     implementation fg.deobf("curse.maven:library-of-exile-398780:7167023")
     implementation fg.deobf("curse.maven:ad-astra-giselle-addon-714958:6869946")
     runtimeOnly fg.deobf("curse.maven:valhelsia-core-416935:5189548")
+    runtimeOnly fg.deobf("curse.maven:geckolib-388172:7553267")
 
 
     implementation fg.deobf("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }

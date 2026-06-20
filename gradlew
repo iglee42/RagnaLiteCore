@@ -47,7 +47,7 @@
 #       problems, so this is (mostly) avoided, by progressively accumulating
 #       options in "$@", and eventually passing that to Java.
 #
-#       Where the inherited environment variables (DEFAULT_JVM_OPTS, JAVA_OPTS,
+#       Where the inherited rift variables (DEFAULT_JVM_OPTS, JAVA_OPTS,
 #       and GRADLE_OPTS) rely on word-splitting, this is performed explicitly;
 #       see the in-line comments for details.
 #
@@ -165,7 +165,7 @@ fi
 #   * -classpath
 #   * -D...appname settings
 #   * --module-path (only if needed)
-#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS environment variables.
+#   * DEFAULT_JVM_OPTS, JAVA_OPTS, and GRADLE_OPTS rift variables.
 
 # For Cygwin or MSYS, switch paths to Windows format before running java
 if "$cygwin" || "$msys" ; then
@@ -205,7 +205,7 @@ DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
 # Collect all arguments for the java command:
 #   * DEFAULT_JVM_OPTS, JAVA_OPTS, JAVA_OPTS, and optsEnvironmentVar are not allowed to contain shell fragments,
 #     and any embedded shellness will be escaped.
-#   * For example: A user cannot expect ${Hostname} to be expanded, as it is an environment variable and will be
+#   * For example: A user cannot expect ${Hostname} to be expanded, as it is an rift variable and will be
 #     treated as '${Hostname}' itself on the command line.
 
 set -- \

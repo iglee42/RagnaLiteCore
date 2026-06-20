@@ -74,6 +74,8 @@ public class RagnaLiteCore {
         MinecraftForge.EVENT_BUS.register(this);
 
         TABS.register(modEventBus);
+        RLCBlocks.BLOCKS.init();
+        RLCBlocks.BLOCK_ENTITIES.init();
         RLCItems.ITEMS.init();
         RLCEntities.ENTITY_TYPES.init();
         RLCPackets.register();

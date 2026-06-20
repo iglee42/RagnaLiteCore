@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:directory",
+      "prefix": "shaders/",
+      "source": "shaders"
+    },
+    {
+      "type": "minecraft:directory",
+      "prefix": "rift/",
+      "source": "rift"
+    }
+  ]
+}

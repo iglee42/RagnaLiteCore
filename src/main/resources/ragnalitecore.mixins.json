@@ -20,7 +20,9 @@
     "TileEntityBasicLaserMixin"
   ],
   "client": [
+    "AdAstraSkyRendererMixin",
     "BlockElementMixin",
+    "LevelRendererMixin",
     "MBDBESRendererMixin",
     "MBDRendererProviderMixin",
     "PlanetsScreenMixin"
