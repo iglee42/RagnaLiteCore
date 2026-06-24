@@ -45,12 +45,14 @@ public class RegisterPatchouliMultiblocksMixin {
     @Redirect(method = "<init>", at = @At(value = "INVOKE", target = "Lvazkii/patchouli/api/PatchouliAPI$IPatchouliAPI;makeMultiblock([[Ljava/lang/String;[Ljava/lang/Object;)Lvazkii/patchouli/api/IMultiblock;",ordinal = 1))
     private IMultiblock ragnamodlite$addNewStateMatchers(PatchouliAPI.IPatchouliAPI instance, String[][] pattern, Object[] objects){
         BloodMagicAPI bmAPI = BloodMagicAPI.INSTANCE;
-        BloodMagicCustomisationConfig.LOGGER.info("Adding new state matchers for Blood Magic Multiblocks, Pattern : ");
-        for(int i = 0; i < pattern.length; ++i) {
-            for(int j = 0; j < pattern[i].length; ++j) {
-                BloodMagicCustomisationConfig.LOGGER.info("pattern[{}][{}] = \"{}\";", i, j, pattern[i][j]);
+        if (BloodMagicCustomisationConfig.debug) {
+            BloodMagicCustomisationConfig.LOGGER.info("Adding new state matchers for Blood Magic Multiblocks, Pattern : ");
+            for (int i = 0; i < pattern.length; ++i) {
+                for (int j = 0; j < pattern[i].length; ++j) {
+                    BloodMagicCustomisationConfig.LOGGER.info("pattern[{}][{}] = \"{}\";", i, j, pattern[i][j]);
+                }
+                BloodMagicCustomisationConfig.LOGGER.info("");
             }
-            BloodMagicCustomisationConfig.LOGGER.info("");
         }
         List<Object> matchers = new ArrayList<>(List.of(objects));
         rmlite$componentTypeMap.forEach((c,type)->{
@@ -69,7 +71,7 @@ public class RegisterPatchouliMultiblocksMixin {
             used = rmlite$componentTypeMap.entrySet().stream().filter(e->e.getValue().equals(component)).map(Map.Entry::getKey).findFirst().orElseThrow(()->new IllegalStateException("Character not found even when the component type is in the Map ??"));
         } else {
             used = AUTHORIZED_CHARACTERS.stream().filter(c->!rmlite$componentTypeMap.containsKey(c)).findFirst().orElseThrow(()->new IllegalStateException("No more characters available for new component types"));
-            BloodMagicCustomisationConfig.LOGGER.info("Added new component type {} with character {} to the pattern",name,used);
+            if (BloodMagicCustomisationConfig.debug) BloodMagicCustomisationConfig.LOGGER.info("Added new component type {} with character {} to the pattern",name,used);
         }
         rmlite$componentTypeMap.put(used,component);
         row.append(used);

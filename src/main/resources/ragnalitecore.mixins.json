@@ -17,7 +17,14 @@
     "MekanismChemicalRecipeCapabilityMixin",
     "PlanetsMenuMixin",
     "RegisterPatchouliMultiblocksMixin",
-    "TileEntityBasicLaserMixin"
+    "TileEntityBasicLaserMixin",
+    "cm.ItemComponentHandlerMixin",
+    "cm.ItemIngredientWrapperMixin",
+    "cm.ItemMachineComponentMixin",
+    "cm.ItemMachineComponentTemplateMixin",
+    "cm.ItemRequirementAccessor",
+    "cm.ItemRequirementMixin",
+    "cm.RegistrationMixin"
   ],
   "client": [
     "AdAstraSkyRendererMixin",
