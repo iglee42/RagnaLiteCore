@@ -4,7 +4,6 @@ import com.google.gson.*;
 import com.mojang.datafixers.util.Pair;
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.JsonOps;
-import com.robertx22.library_of_exile.main.ExileLog;
 import fr.iglee42.ragnalitecore.RagnaLiteCore;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
