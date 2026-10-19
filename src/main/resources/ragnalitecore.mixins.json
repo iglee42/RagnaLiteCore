@@ -9,6 +9,7 @@
     "BlackHoleBlockEntityMixin",
     "ChemicalTankCapabilityTraitGasMixin",
     "ComponentTypeMixin",
+    "FalloutMixin",
     "FuelLoaderBlockEntityMixin",
     "HazmatArmorItemMixin",
     "MBDMachineDefinitionMixin",
