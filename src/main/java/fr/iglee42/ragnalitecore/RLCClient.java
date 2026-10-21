@@ -4,16 +4,20 @@ import com.drd.ad_extendra.client.models.entities.vehicles.CustomRocketModel;
 import com.drd.ad_extendra.client.renderers.entities.vehicles.CustomRocketRenderer;
 import earth.terrarium.adastra.client.forge.AdAstraClientForge;
 import earth.terrarium.adastra.client.renderers.entities.vehicles.RocketRenderer;
+import earth.terrarium.adastra.common.entities.mob.SulfurCreeper;
 import earth.terrarium.botarium.client.ClientHooks;
+import fr.iglee42.ragnalitecore.client.entity.PlanetCreeperRenderer;
 import fr.iglee42.ragnalitecore.rift.RiftingBlockRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import static fr.iglee42.ragnalitecore.RLCEntities.*;
 
 import java.util.function.BiConsumer;
 
@@ -51,6 +55,23 @@ public class RLCClient {
         ClientHooks.registerEntityRenderer(RLCEntities.TIER_20_ROCKET, c -> new RocketRenderer(c, CustomRocketModel.TIER_11_LAYER, TIER_20_TEXTURE));
         ClientHooks.registerEntityRenderer(RLCEntities.TIER_21_ROCKET, c -> new RocketRenderer(c, CustomRocketModel.TIER_11_LAYER, TIER_21_TEXTURE));
         event.registerBlockEntityRenderer(RLCBlocks.RIFTING_BLOCK_ENTITY.get(), RiftingBlockRenderer::new);
+
+        event.registerEntityRenderer(MOON_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(MARS_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(MERCURY_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(JUPITER_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(SATURN_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(URANUS_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(NEPTUNE_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(CERES_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(PLUTO_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(HAUMEA_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(QUAOAR_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(MAKEMAKE_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(ERIS_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(GONGGONG_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(SEDNA_CREEPER.get(), PlanetCreeperRenderer::new);
+        event.registerEntityRenderer(ORCUS_CREEPER.get(), PlanetCreeperRenderer::new);
     }
 
     public static void onRegisterItemRenderers(BiConsumer<Item, BlockEntityWithoutLevelRenderer> consumer) {

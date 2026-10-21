@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "ragnalitecore:moon_creeper",
+    "ragnalitecore:mars_creeper",
+    "ragnalitecore:mercury_creeper",
+    "ragnalitecore:jupiter_creeper",
+    "ragnalitecore:saturn_creeper",
+    "ragnalitecore:uranus_creeper",
+    "ragnalitecore:neptune_creeper",
+    "ragnalitecore:ceres_creeper",
+    "ragnalitecore:pluto_creeper",
+    "ragnalitecore:haumea_creeper",
+    "ragnalitecore:quaoar_creeper",
+    "ragnalitecore:makemake_creeper",
+    "ragnalitecore:eris_creeper",
+    "ragnalitecore:gonggong_creeper",
+    "ragnalitecore:sedna_creeper",
+    "ragnalitecore:orcus_creeper"
+  ]
+}
+
